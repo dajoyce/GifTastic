@@ -6,7 +6,7 @@ $(document).ready(function() {
   function displayHouse() {
     var house = $(this).attr("data-name");
     var queryURL =
-      "http://api.giphy.com/v1/gifs/search?q=" +
+      "https://api.giphy.com/v1/gifs/search?q=" +
       house +
       "&api_key=x7OGB6N6Rv3hE6q4JQ3bHV43uvhd2W0R&limit=10";
 
