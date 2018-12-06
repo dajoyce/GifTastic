@@ -50,6 +50,7 @@ $(document).ready(function() {
     houses.push(house);
 
     renderButtons();
+    document.getElementById("addButtonSearch").reset();
   });
 
   //Function for pausing and playing GIF

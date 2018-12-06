@@ -1,0 +1,57 @@
+body {
+  background-image: url("../images/just-waves.png");
+  background-repeat: repeat;
+}
+
+#buttonArea {
+  padding: 20px;
+  background-color: #00a6ccfa;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+#addButtonSearch {
+  background-color: #e9ecef;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#gifArea {
+  background-color: #e9ecef;
+  margin-left: 300px;
+  margin-right: 300px;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#addHouse {
+  background-color: gold;
+  border-color: black;
+  border-width: thick;
+}
+
+p {
+  font-size: 25px;
+}
+
+.jumbotron-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  border-radius: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.house-btn {
+  background-color: gold;
+  border-color: black;
+  border-width: thick;
+}
