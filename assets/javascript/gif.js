@@ -13,10 +13,17 @@ $(document).ready(function() {
     $.ajax({ url: queryURL, method: "GET" }).then(function(response) {
       console.log(response.data);
       for (var i = 0; i < response.data.length; i++) {
-        $("#gifArea").prepend("<p>Rating: " + response.data[i].rating + "</p>");
-        $("#gifArea").prepend(
-          "<img src ='" + response.data[i].images.downsized.url + "'>"
+        var houseImage = $("<img>");
+        houseImage.attr("src", response.data[i].images.downsized_still.url);
+        houseImage.attr(
+          "data-still",
+          response.data[i].images.downsized_still.url
         );
+        houseImage.attr("data-animate", response.data[i].images.downsized.url);
+        houseImage.attr("data-state", "still");
+        houseImage.attr("class", "gif");
+        $("#gifArea").prepend("<p>Rating: " + response.data[i].rating + "</p>");
+        $("#gifArea").prepend(houseImage);
       }
     });
   }
@@ -46,7 +53,17 @@ $(document).ready(function() {
   });
 
   //Function for pausing and playing GIF
-  // Function gifChangeState()
+  $("#gifArea").on("click", ".gif", function() {
+    var state = $(this).attr("data-state");
+    console.log("Gif Clicked");
+    if (state === "still") {
+      $(this).attr("src", $(this).attr("data-animate"));
+      $(this).attr("data-state", "animate");
+    } else {
+      $(this).attr("src", $(this).attr("data-still"));
+      $(this).attr("data-state", "still");
+    }
+  });
 
   $(document).on("click", ".house-btn", displayHouse);
 
